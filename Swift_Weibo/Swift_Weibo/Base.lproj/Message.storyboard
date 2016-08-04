@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--消息-->
         <scene sceneID="pBe-0L-UnO">
             <objects>
-                <tableViewController id="7ch-0M-TJa" sceneMemberID="viewController">
+                <tableViewController id="7ch-0M-TJa" customClass="MessageViewController" customModule="Swift_Weibo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OIm-sD-x3d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                             <outlet property="delegate" destination="7ch-0M-TJa" id="NCR-yZ-t9Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Tee-Z8-m1r"/>
+                    <navigationItem key="navigationItem" title="消息" id="Tee-Z8-m1r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0Q-Sx-7xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
