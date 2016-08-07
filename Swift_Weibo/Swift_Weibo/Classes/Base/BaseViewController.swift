@@ -10,12 +10,12 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    var isLogin = false
-    
-    
-    override func loadView() {
-        isLogin ? super.loadView() : setupVisitorView()
-    }
+//    var isLogin = false
+//    
+//    
+//    override func loadView() {
+//        isLogin ? super.loadView() : setupVisitorView()
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
