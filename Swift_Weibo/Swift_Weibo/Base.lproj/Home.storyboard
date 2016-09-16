@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A8P-QR-qMP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="uma-Jg-2Zg">
+            <objects>
+                <tableViewController id="0kL-tL-b4A" customClass="HomeViewController" customModule="Swift_Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GBa-UP-cND">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dc3-R8-lzg">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dc3-R8-lzg" id="Jmg-de-u1N">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0kL-tL-b4A" id="dlJ-i2-t9J"/>
+                            <outlet property="delegate" destination="0kL-tL-b4A" id="Y2U-Up-ChM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="首页" id="n8A-Ut-52j"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egU-BL-OIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="-2004"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="1ee-ra-azx">
+            <objects>
+                <viewController storyboardIdentifier="oauthVC" hidesBottomBarWhenPushed="YES" id="DNd-VC-byH" customClass="OAuthViewController" customModule="Swift_Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FhS-0G-gMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5a-31-CqZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HD7-oU-gjs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-IB-lDq">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DNd-VC-byH" id="KdO-Z2-vrK"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q5i-IB-lDq" secondAttribute="trailing" id="99u-wS-Svj"/>
+                            <constraint firstItem="q5i-IB-lDq" firstAttribute="leading" secondItem="HD7-oU-gjs" secondAttribute="leading" id="R0P-aH-uwI"/>
+                            <constraint firstItem="q5i-IB-lDq" firstAttribute="top" secondItem="FhS-0G-gMb" secondAttribute="bottom" id="UwV-BB-iPj"/>
+                            <constraint firstItem="L5a-31-CqZ" firstAttribute="top" secondItem="q5i-IB-lDq" secondAttribute="bottom" id="vya-nE-PKw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="oauthView" destination="q5i-IB-lDq" id="9z5-FM-Ql4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQx-DR-f0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="-4326"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="XfT-Ib-RhW">
+            <objects>
+                <viewController storyboardIdentifier="popoverVC" id="h0k-il-8f1" customClass="PopoverViewController" customModule="Swift_Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vjt-nD-KoE"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwD-m2-bsu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r4k-Jh-0qL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-Ly-ZEB">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-ff-54j">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-il-8f1" id="TOl-UZ-rXW"/>
+                                    <outlet property="delegate" destination="h0k-il-8f1" id="YT2-lr-mUh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fwD-m2-bsu" firstAttribute="top" secondItem="ILi-ff-54j" secondAttribute="bottom" constant="20" id="3vL-wA-u2J"/>
+                            <constraint firstItem="ILi-ff-54j" firstAttribute="top" secondItem="Vjt-nD-KoE" secondAttribute="bottom" constant="20" id="63H-e6-pLA"/>
+                            <constraint firstItem="jo3-Ly-ZEB" firstAttribute="top" secondItem="Vjt-nD-KoE" secondAttribute="bottom" id="7fi-7d-M2K"/>
+                            <constraint firstItem="jo3-Ly-ZEB" firstAttribute="leading" secondItem="r4k-Jh-0qL" secondAttribute="leading" id="EDs-gJ-hVB"/>
+                            <constraint firstItem="fwD-m2-bsu" firstAttribute="top" secondItem="jo3-Ly-ZEB" secondAttribute="bottom" id="FkZ-f9-8ir"/>
+                            <constraint firstItem="ILi-ff-54j" firstAttribute="leading" secondItem="r4k-Jh-0qL" secondAttribute="leadingMargin" id="Gfr-Pq-6LA"/>
+                            <constraint firstItem="ILi-ff-54j" firstAttribute="trailing" secondItem="r4k-Jh-0qL" secondAttribute="trailingMargin" id="MMS-9q-Sgb"/>
+                            <constraint firstAttribute="trailing" secondItem="jo3-Ly-ZEB" secondAttribute="trailing" id="q2A-fC-gka"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ILi-ff-54j" id="ApE-eL-WHl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBg-Gm-bwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175" y="-3318"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="W2I-dA-zV4">
+            <objects>
+                <navigationController id="A8P-QR-qMP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" selectedImage="tabbar_home_selected" id="5e4-XX-FKl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pwv-JC-s38">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0kL-tL-b4A" kind="relationship" relationship="rootViewController" id="0hd-5P-DpT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubo-Av-TXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1178" y="-2016"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popover_background" width="217" height="49"/>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_selected" width="30" height="30"/>
+    </resources>
+</document>

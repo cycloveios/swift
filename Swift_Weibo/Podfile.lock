@@ -1,0 +1,49 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SnapKit (0.21.1)
+  - SVProgressHUD (2.0.3)
+  - WeiboSDK (3.1.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - SDWebImage
+  - SnapKit
+  - SVProgressHUD
+  - WeiboSDK (from `http://github.com/sinaweibosdk/weibo_ios_sdk.git`)
+
+EXTERNAL SOURCES:
+  WeiboSDK:
+    :git: http://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+CHECKOUT OPTIONS:
+  WeiboSDK:
+    :commit: 6031a8da4ce17867ff5887b8dfc59ea45930274e
+    :git: http://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
+
+PODFILE CHECKSUM: 1c763dcec87060aad23918d3b6b4329c163b3b77
+
+COCOAPODS: 1.0.1
