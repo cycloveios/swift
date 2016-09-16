@@ -58,7 +58,7 @@ extension OAuthViewController{
     }
     
     private func loadAccessToken(code : String){
-        HTTPAPI.shareAPI.loadAccessToken(code) { [weak self] (data, error) in
+        HTTPAPI.shareAPI.loadAccessToken(code) {  (data, error) in
             if error != nil{
                 return
             }
@@ -71,7 +71,7 @@ extension OAuthViewController{
             let account = UserAccount(dic: accountDic)
             print(account.uid)
             
-            self!.loadUserInfo(account.access_token, uid: account.uid)
+            self.loadUserInfo(account.access_token, uid: account.uid)
         }
     }
     
@@ -79,7 +79,8 @@ extension OAuthViewController{
         
         print(access_token! + uid!)
         HTTPAPI.shareAPI.loadUserInfo(access_token!, uid: uid!) { (result, error) in
-            print(result)
+            let user = User.init(dic: (result as! [String: AnyObject]))
+            
         }
     }
   
@@ -120,7 +121,7 @@ extension OAuthViewController : UIWebViewDelegate{
         loadAccessToken(code)
         
         
-        return true
+        return false
     }
     
     

@@ -29,6 +29,8 @@ class HTTPAPI: AFHTTPSessionManager {
             finished!(result: data, error: nil)
         }
         let failure : ((dataTask : NSURLSessionDataTask?, error : NSError) -> ())? = {(dataTask : NSURLSessionDataTask?, error : NSError) in
+            
+            print(error)
             finished!(result: nil, error: error)
         }
         let progress : ((progress : NSProgress) -> Void)? = {(progress : NSProgress) in

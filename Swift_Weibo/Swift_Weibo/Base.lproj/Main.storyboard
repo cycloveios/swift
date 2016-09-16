@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kM-qy-JQH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PIa-ob-Bct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--tabbar-->
@@ -54,6 +55,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UH3-2k-2M1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362" y="438"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TzQ-4O-bfp">
+            <objects>
+                <navigationController id="PIa-ob-Bct" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cTr-MV-g6f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QH0-Kt-kYs" kind="relationship" relationship="rootViewController" id="KCs-UC-Cyj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3e-8u-uT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="-619"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8DM-EI-6nj">
+            <objects>
+                <viewController id="QH0-Kt-kYs" customClass="ViewController" customModule="Swift_Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RSi-6d-pub"/>
+                        <viewControllerLayoutGuide type="bottom" id="qzt-mn-OAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KtU-bZ-gxi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-TI-Dq1">
+                                <rect key="frame" x="20" y="64" width="560" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aGW-F6-t5d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QH0-Kt-kYs" id="gt9-R3-5r8"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eS7-TI-Dq1" secondAttribute="trailing" id="BAe-SM-qcg"/>
+                            <constraint firstItem="eS7-TI-Dq1" firstAttribute="top" secondItem="RSi-6d-pub" secondAttribute="bottom" id="bUm-5O-gUa"/>
+                            <constraint firstItem="eS7-TI-Dq1" firstAttribute="leading" secondItem="KtU-bZ-gxi" secondAttribute="leadingMargin" id="rRa-P7-cya"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g1X-BG-cq5"/>
+                    <connections>
+                        <outlet property="textView" destination="eS7-TI-Dq1" id="udz-Kp-L8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvm-fD-3IW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mdr-tU-JCM">

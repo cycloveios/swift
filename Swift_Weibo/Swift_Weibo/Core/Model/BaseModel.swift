@@ -8,6 +8,19 @@
 
 import UIKit
 
-class BaseModel: NSObject {
+class BaseModel: NSObject,NSCoding {
+    
+    override init() {
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        
+    }
+    
 
 }

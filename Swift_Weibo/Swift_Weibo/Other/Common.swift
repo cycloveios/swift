@@ -16,5 +16,5 @@ let WEIBO_REDIRECT = "http://www.baidu.com"
 ///微博的access_token网址
 let WEIBO_URL_ACCESS_TOKEN = "https://api.weibo.com/oauth2/access_token"
 ///微博获取用户基本信息网址
-let WEIBO_URL_USER = "https://api.weibo.com/2/eps/user/info.json"
+let WEIBO_URL_USER = "https://api.weibo.com/2/users/show.json"
         
